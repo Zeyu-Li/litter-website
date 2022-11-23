@@ -39,7 +39,7 @@ const Skills: React.FC = () => {
         </h1>
         <div className="py-12 -sm:py-6">
           {SkillsList.map(({ title, skills }) => (
-            <div className="mb-6 flex flex-col">
+            <div className="mb-6 flex flex-col" key={title}>
               <h2 className="text-5xl font-bold text-secondary -sm:text-3xl">
                 {title}
               </h2>

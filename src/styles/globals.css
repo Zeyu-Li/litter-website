@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden !important;
+}
+
+/* Penguin model starting animations */
+.penguinModelLoad {
+  top: -90vh;
+  animation: fall 1s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: -90vh;
+  }
+  100% {
+    top: 5vh;
+  }
+}
+
+/* if below -md, size changes to auto 100% */
+@media (max-width: 768px) {
+  .backgroundPile {
+    background-size: auto 50%;
+  }
+}
+
+.backgroundPile {
+  background-image: url("/images/pile.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+/* background on main */
+.backgroundPileMain {
+  background-image: url("/images/pileLarge.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+/* if below -md, size changes to auto 100% */
+@media (max-width: 768px) {
+  .backgroundPileMain {
+    background-image: url("/images/pile2.png");
+    background-size: auto 60%;
+  }
+}
+
+/* Header on load anim */
+.border-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.3);
+  animation: border_animation 1s linear forwards;
+}
+
+@keyframes border_animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* staggered fade in */
+.fadeIn > * {
+  opacity: 0;
+  animation: fadeUpAndIn 300ms ease-in forwards;
+}
+
+@keyframes fadeUpAndIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn > *:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.fadeIn > *:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.fadeIn > *:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.fadeIn:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+/* https://jarv.is/notes/css-waving-hand-emoji/ */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.667s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.extraMargin {
+  margin-left: 2vw;
+}
+.mobileOpacity div {
+  pointer-events: none !important;
+}
+@media only screen and (max-width: 768px) {
+  .mobileOpacity {
+    opacity: 30%;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .extraMargin {
+    margin-left: 20vw;
+  }
+  .mobileOpacity > div {
+    left: -200px;
+  }
+}
+
+/* 
+* gradients too lazy to implement in 
+* tailwind since the figma inspect is there 
+*/
+.goldGradient1 {
+  background: linear-gradient(180deg, #f96614 0%, #f9c614 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.goldGradient2 {
+  background-color: linear-gradient(180deg, #f9c614 0%, #f96614 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* increaser gradients */
+.increaserGrad1 {
+  background: radial-gradient(
+      54.92% 161.95% at 50% 50.51%,
+      #488ef7 0%,
+      #a348f7 91.22%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-position: 400% 400%;
+  text-fill-color: transparent;
+}
+
+.increaserGrad2 {
+  background: radial-gradient(
+    79.8% 122.96% at 58.98% 0%,
+    #a348f7 0%,
+    #488ef7 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-position: 400% 400%;
+  text-fill-color: transparent;
+}
+
+/* 
+@keyframes rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+/* bounce in from right to left */
+.bounceInRight {
+  animation-name: bounceInRight;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+/* if on tablet or smaller do not display bounceInRight */
+@media (max-width: 768px) {
+  .bounceInRight {
+    display: none;
+  }
+}
+
+@keyframes bounceInRight {
+  0% {
+    transform: translateX(16rem);
+  }
+  75% {
+    transform: translateX(6rem);
+  }
+  90% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+/* input forms */
+.inputForms {
+  font-size: 2rem;
+  background-clip: padding-box;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 7px 12px 0px rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 700px;
+  width: 100%;
+}
+.inputForms:focus {
+  background-color: white;
+  border-color: rgba(0, 123, 255, 0.945);
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.945);
+}

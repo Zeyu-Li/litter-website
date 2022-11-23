@@ -1,9 +1,14 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { useRef, useState } from "react";
 import { useIntersection } from "react-use";
 import CounterAnalytics from "../common/CounterAnalytics";
-import Typing from "./who/Typing.js";
+
+// import Typing with ssr: false
+const Typing = dynamic(() => import("./who/Typing.js"), {
+  ssr: false,
+});
 
 const Who: React.FC = () => {
   const [scrolledAbout, setScrolledAbout] = useState(false);

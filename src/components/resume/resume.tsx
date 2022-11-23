@@ -4,7 +4,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const ResumeDoc: React.FC = React.memo(() => {
+const ResumeDoc = () => {
   // sets title
   useEffect(() => {
     document.title = "Andrew's Portfolio | Resume";
@@ -56,6 +56,6 @@ const ResumeDoc: React.FC = React.memo(() => {
       </div>
     </Document>
   );
-});
+};
 
 export default ResumeDoc;

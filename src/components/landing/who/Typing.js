@@ -1,7 +1,6 @@
 import TypeIt from "typeit-react";
-import React from "react";
 
-const Typing = React.memo(() => {
+const Typing = () => {
   const words = ["frontend", "backend", "JavaScript", "Python", "for you"];
 
   return (
@@ -29,8 +28,8 @@ const Typing = React.memo(() => {
         // Remember to return it!
         return instance;
       }}
-    ></TypeIt>
+    />
   );
-});
+};
 
 export default Typing;

@@ -17,7 +17,7 @@ const Resume: NextPage = () => {
       <main>
         <div
           id="resume"
-          className="min-h-screen w-screen bg-primary p-12 pt-[25vh]"
+          className="min-h-screen w-screen bg-primary p-12 pt-[20vh]"
         >
           <div className="m-auto max-w-4xl">
             <h1 className="mb-12 text-7xl font-bold text-secondary underline -sm:text-5xl">

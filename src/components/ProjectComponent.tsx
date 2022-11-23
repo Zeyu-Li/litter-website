@@ -26,7 +26,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({
   isGame,
 }) => {
   return (
-    <div className="pt-12">
+    <div className="pb-12">
       <h2 className="text-5xl font-bold italic text-secondary -sm:text-3xl">
         {title}
       </h2>
@@ -85,13 +85,13 @@ const ProjectComponent: React.FC = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen w-screen bg-primary p-12 pt-[25vh]"
+      className="min-h-screen w-screen bg-primary p-12 pt-[20vh]"
     >
       <div className="m-auto max-w-4xl">
         <h1 className="text-7xl font-bold text-secondary underline -sm:text-5xl">
           Projects:
         </h1>
-        <div className="pt-24 -sm:pt-12">
+        <div className="pt-12 -sm:pt-6">
           {/* TODO: Conspire coming soon */}
           {/* <SingleProject
             title="Conspire.ai"

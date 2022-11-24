@@ -2,11 +2,11 @@
 
 [![Tinkering Penguin](img/GitHubPreview.png)](https://tinkeringpenguin.com)
 
-This is my website made in with Nextjs (start with create T3). Visit it at [tinkeringpenguin.com 🔗](https://tinkeringpenguin.com).
+This is my website made in with Nextjs (start with create T3). Visit it at [andrewli.site 🔗](https://andrewli.site/).
 
 ## Demo
 
-![Demo](img/demo.gif)
+
 
 ## Performance
 

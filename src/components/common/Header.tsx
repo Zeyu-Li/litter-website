@@ -20,7 +20,7 @@ const Header: React.FC = () => {
               src="/icon.png"
               alt="Tinkering Penguin Logo"
               title="Tinkering Penguin Logo"
-              className="my-4 h-12 w-12"
+              className="spinMe my-4 h-12 w-12"
             />
           </Link>
         </div>

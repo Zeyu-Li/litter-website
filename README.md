@@ -6,7 +6,7 @@ This is my website made in with Nextjs (start with create T3). Visit it at [andr
 
 ## Demo
 
-
+![Demo](img/demo.gif)
 
 ## Performance
 

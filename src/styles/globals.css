@@ -308,18 +308,16 @@ html {
   }
 }
 
-.spinMe:hover {
-  -webkit-animation: spinning 2s linear infinite;
-  animation: spinning 2s linear infinite;
+.spinMe {
+  /* -webkit-animation: spinning 2s linear infinite;
+  animation: spinning 2s linear infinite; */
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
-@keyframes spinning {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+.spinMe:hover {
+  /* -webkit-animation: spinning 2s linear infinite;
+  animation: spinning 2s linear infinite; */
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }

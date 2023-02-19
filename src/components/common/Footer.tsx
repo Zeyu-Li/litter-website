@@ -24,18 +24,18 @@ const Footer: React.FC = () => {
     // background of pile.png
     <footer
       id="footer"
-      className="backgroundPileMain min-h-[80vh] bg-primary text-center text-3xl text-secondary/80 -md:min-h-[60vh] -sm:text-xl"
+      className="backgroundPileMain min-h-[80vh] bg-primary text-center text-3xl text-[#c7c7c7] -md:min-h-[60vh] -sm:text-xl"
     >
       <div className="flex h-full flex-row">
-        <span className="flex-1"></span>
+        <span className="flex-1 -xl:hidden"></span>
         {/* links */}
-        <div className="flex min-h-[80vh] flex-1 flex-col">
+        <div className="flex min-h-[80vh] flex-1 flex-col -xl:mx-6">
           <div className="flex flex-1 flex-col justify-center">
-            <p>
+            <p className="px-8">
               ©️ 2022 •{" "}
               <Link href="/" title="Home">
                 Home
-              </Link>
+              </Link>{" "}
               •{" "}
               <Link href="/#contact" title="Contact">
                 Contact

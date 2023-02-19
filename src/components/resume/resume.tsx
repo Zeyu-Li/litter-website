@@ -12,18 +12,12 @@ const ResumeDoc = () => {
   }, []);
 
   const [PDFWidth, setPDFWidth] = useState(
-    window.innerWidth > 1050
-      ? window.innerWidth * 0.52
-      : window.innerWidth * 0.7
+    window.innerWidth > 1050 ? 880 : window.innerWidth * 0.7
   );
 
   useEffect(() => {
     const resizeListener = () => {
-      setPDFWidth(
-        window.innerWidth > 1050
-          ? window.innerWidth * 0.52
-          : window.innerWidth * 0.7
-      );
+      setPDFWidth(window.innerWidth > 1050 ? 880 : window.innerWidth * 0.7);
     };
 
     // set resize listener

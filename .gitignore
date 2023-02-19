@@ -42,3 +42,4 @@ yarn-error.log*
 *Zone.Identifier
 *.psd
 img/model/penguin_model.blend
+*.prproj

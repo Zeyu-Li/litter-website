@@ -31,13 +31,13 @@ const SingleProject: React.FC<SingleProjectProps> = ({
         {title}
       </h2>
       {img && link && title ? (
-        <div className="mt-12 h-[40vh] w-[40vw] -xl:h-[20vh] -sm:h-[15vh] -sm:w-[80vw]">
+        <div className="mt-12 h-[38vh] w-[40vw] -xl:h-[20vh] -sm:h-[15vh] -sm:w-[80vw]">
           <Link href={link} target="_blank" className="pt-4">
             <Parallax
               bgImage={img}
               bgImageAlt={`${title} thumbnail`}
               strength={strength}
-              className="z-[1] h-[40vh] w-[40vw] rounded-xl -xl:h-[20vh] -sm:h-[15vh] -sm:w-[80vw]"
+              className="z-[1] h-[38vh] w-[40vw] rounded-xl -xl:h-[20vh] -sm:h-[15vh] -sm:w-[80vw]"
             />
           </Link>
         </div>
@@ -85,10 +85,10 @@ const ProjectComponent: React.FC = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen w-screen bg-primary p-12 pt-[20vh]"
+      className="abstractSvg2 min-h-screen w-screen bg-primary p-12 pt-[20vh]"
     >
       <div className="m-auto max-w-4xl">
-        <h1 className="text-7xl font-bold text-secondary underline -sm:text-5xl">
+        <h1 className="text-7xl text-secondary underline -sm:text-5xl">
           Projects:
         </h1>
         <div className="pt-12 -sm:pt-6">
@@ -109,6 +109,21 @@ const ProjectComponent: React.FC = () => {
 
           <CounterAnalytics />
           <SingleProject
+            title="UwULang"
+            link="https://uwulang.vercel.app/"
+            img="/images/projects/uwulang.png"
+            description={
+              <>
+                The #1 programming to get things done 👉👈. UwULang is a turing
+                complete emoji based language
+                <br />
+                {">"} Using C, Python, Bash, Next.js
+              </>
+            }
+            github="https://github.com/UwULang/uwulang"
+            demo="https://uwulang.vercel.app/"
+          />
+          <SingleProject
             title="Chatter"
             link="https://chatter-zeyu-li.vercel.app/"
             img="/images/projects/chatter.png"
@@ -126,7 +141,7 @@ const ProjectComponent: React.FC = () => {
             description={
               <>
                 A NPM Typescript module that runs Lua with over{" "}
-                <b>2,000 downloads</b>
+                <b>2,000 total downloads</b>
                 <br />
                 {">"} Using TypeScript, Webassembly
               </>

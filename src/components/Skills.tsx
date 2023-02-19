@@ -32,9 +32,9 @@ const SkillsList = [
 
 const Skills: React.FC = () => {
   return (
-    <div id="skills" className="min-h-screen w-screen bg-primary p-12">
+    <div id="skills" className="min-h-screen w-screen bg-primary p-12 pb-0">
       <div className="m-auto max-w-4xl">
-        <h1 className="text-7xl font-bold text-secondary underline -sm:text-5xl">
+        <h1 className="text-7xl text-secondary underline -sm:text-5xl">
           Skills:
         </h1>
         <div className="py-12 -sm:py-6">

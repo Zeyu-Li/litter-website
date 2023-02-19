@@ -42,8 +42,8 @@ const Contact: React.FC = () => {
           ref={intersectionRef}
         >
           <span className="text-accent">Me</span>
-          <wbr />
-          .contact()
+          .<wbr />
+          contact()
         </h3>
 
         <form onSubmit={(e) => sendEmail(e)} className="pt-12">
@@ -66,6 +66,7 @@ const Contact: React.FC = () => {
             <Link
               href="mailto:hello@andrewli.site"
               className="text-accent hover:text-buttonHover"
+              title="Email me"
             >
               hello@
               <wbr />

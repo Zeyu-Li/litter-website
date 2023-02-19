@@ -5,13 +5,13 @@ const About: React.FC = () => {
   return (
     <div
       id="about"
-      className="flex min-h-screen w-screen flex-row items-center bg-primary py-[15vh] pl-[30vw] pr-[20vw] -sm:pr-2"
+      className="abstractSvg2 flex min-h-screen w-screen flex-row items-center bg-primary py-[15vh] pl-[30vw] pr-[20vw] -sm:pr-2"
     >
       <div>
         <h3 className="text-7xl font-bold text-secondary -sm:text-5xl">
           <span className="text-accentDark">Me</span>
-          <wbr />
-          .about()
+          .<wbr />
+          about()
         </h3>
         <div className="pt-24">
           <p className="text-5xl text-secondary -sm:text-2xl">

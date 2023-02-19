@@ -50,14 +50,25 @@ const Who: React.FC = () => {
       <div className={scrolledAbout ? "fadeIn" : "opacity-0"}>
         <h3 className="text-7xl font-bold text-primary -sm:text-5xl">
           <span className="text-accent">Me</span>
-          <wbr />
-          .who()
+          .<wbr />
+          who()
         </h3>
         <h4 className="pt-12 text-5xl leading-[4rem] text-primary -sm:pt-6 -sm:text-2xl">
           I can code <Typing />
         </h4>
         {/* list of employment */}
         <ul className="list-disc pl-12 pt-12 -sm:pt-6">
+          <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-2xl">
+            <p>Incoming Metaverse SWD</p>
+            <Link
+              href="https://www.intuit.com/"
+              title="Intuit website"
+              target="_blank"
+              className="text-accent transition-all hover:text-buttonHover hover:underline "
+            >
+              @Intuit
+            </Link>
+          </li>
           <li
             className="text-5xl leading-[4rem] text-primary -sm:text-2xl"
             ref={aboutIntersectionRef}
@@ -65,24 +76,13 @@ const Who: React.FC = () => {
             <p>CEO & Founder</p>
             <Link
               href="https://antarcticsolutions.ca/"
-              title="antarctic solutions website"
+              title="Antarctic Solutions website"
               target="_blank"
               className="text-accent transition-all hover:text-buttonHover hover:underline "
             >
               @Antarctic Solutions
               {/* open link fa icon */}
               <FaExternalLinkAlt className="ml-2 inline-block h-8 w-8 text-accent -sm:h-4 -sm:w-4" />
-            </Link>
-          </li>
-          <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-2xl">
-            <p>Formerly SWD</p>
-            <Link
-              href="https://www.intuit.com/"
-              title="intuit website"
-              target="_blank"
-              className="text-accent transition-all hover:text-buttonHover hover:underline "
-            >
-              @Intuit
             </Link>
           </li>
           <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-2xl">

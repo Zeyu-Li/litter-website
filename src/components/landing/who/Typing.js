@@ -1,7 +1,7 @@
 import TypeIt from "typeit-react";
 
 const Typing = () => {
-  const words = ["frontend", "backend", "JavaScript", "Python", "for you"];
+  const words = ["frontend", "backend", "Python", "for you"];
 
   return (
     <TypeIt
@@ -19,11 +19,7 @@ const Typing = () => {
           .pause(750)
           .delete(words[2].length)
           .pause(500)
-          .type(words[3])
-          .pause(750)
-          .delete(words[3].length)
-          .pause(500)
-          .type(words[4]);
+          .type(words[3]);
 
         // Remember to return it!
         return instance;

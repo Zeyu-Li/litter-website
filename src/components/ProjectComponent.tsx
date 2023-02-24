@@ -180,7 +180,7 @@ const ProjectComponent: React.FC = () => {
           />
 
           <p className="my-4 text-3xl text-secondary -sm:text-2xl">
-            Over 150 projects/repos on{" "}
+            Over 200 projects/repos on{" "}
             <Link
               href="https://github.com/Zeyu-Li"
               target="_blank"

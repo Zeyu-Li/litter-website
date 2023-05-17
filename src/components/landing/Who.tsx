@@ -59,7 +59,7 @@ const Who: React.FC = () => {
         {/* list of employment */}
         <ul className="list-disc pl-12 pt-12 -sm:pt-6">
           <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-2xl">
-            <p>Incoming Metaverse SWD</p>
+            <p>R&D SWD Co-op</p>
             <Link
               href="https://www.intuit.com/"
               title="Intuit website"

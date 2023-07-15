@@ -1,16 +1,16 @@
 const SkillsList = [
   {
     title: "🌺 Frontend",
-    skills: "JavaScript/Typescript, HTML, CSS/SCSS",
+    skills: "JavaScript/Typescript, HTML, CSS/SCSS, SwiftUI",
   },
   {
     title: "💼 Backend",
-    skills: "Kubernetes, Python, Node.js, SQL, AWS, Firebase, GCP",
+    skills: "Kubernetes, Python, Node.js, SQL, NoSQL AWS, Firebase, GCP",
   },
   {
     title: "📚 Libraries/Frameworks",
     skills:
-      "React/React Native, GraphQL, Django, Flask, Express.js, Nest.js, Next.js, Electron.js",
+      "React/React Native, GraphQL, Django, Flask, Express.js, Nest.js, Next.js, Node.js, Electron.js, Tailwind",
   },
   {
     title: "🎮 Game",
@@ -18,15 +18,15 @@ const SkillsList = [
   },
   {
     title: "🧵 Miscellaneous",
-    skills: "Jenkins, C++, C#, Java, Lua, LaTeX, Markdown, Bash, Serverless",
+    skills: "Docker, Jenkins, C++, C#, Java, Lua, LaTeX, Markdown, Bash, Serverless, Rust, GPT",
   },
   {
-    title: "✨ Other Languages",
-    skills: "Docker, Figma, Git/GitHub, Blender, Adobe Illustrator",
+    title: "✨ Other",
+    skills: "Figma, Git/GitHub, Blender, Adobe Illustrator",
   },
   {
     title: "📖 Learning",
-    skills: "Rust, TensorFlow, Haskell",
+    skills: "TensorFlow, Haskell, Terraform",
   },
 ];
 

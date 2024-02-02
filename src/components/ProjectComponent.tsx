@@ -165,7 +165,7 @@ const ProjectComponent: React.FC = () => {
           />
           <SingleProject
             title="Attacked from Above"
-            link="https://github.com/Zeyu-Li/django_ecommerce_app"
+            link="https://andrewli.itch.io/attacked-from-above"
             img="/images/projects/game.png"
             description={
               <>

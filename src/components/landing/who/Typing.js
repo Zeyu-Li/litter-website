@@ -1,7 +1,7 @@
 import TypeIt from "typeit-react";
 
 const Typing = () => {
-  const words = ["frontend", "backend", "Python", "for you"];
+  const words = ["frontend", "backend", "AI", "for you"];
 
   return (
     <TypeIt

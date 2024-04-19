@@ -15,8 +15,11 @@ const About: React.FC = () => {
         </h3>
         <div className="pt-24">
           <p className="text-5xl text-secondary -sm:text-2xl">
-            I{"'"}m a <span className="text-highlight">creative</span> who likes
-            to tinker with all things tech and business
+            I{"'"}m a{" "}
+            <span className="animate-gradient bg-gradient-to-r from-highlight via-blue-500 to-green-400 bg-clip-text font-bold text-transparent">
+              creative
+            </span>{" "}
+            who likes to tinker with all things tech and business
           </p>
         </div>
         <div className="pt-24">

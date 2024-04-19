@@ -59,7 +59,7 @@ const Who: React.FC = () => {
         {/* list of employment */}
         <ul className="list-disc pl-12 pt-12 -sm:pt-6">
           <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-2xl">
-            <p>R&D SWD Co-op</p>
+            <p>SWE AI</p>
             <Link
               href="https://www.intuit.com/"
               title="Intuit website"
@@ -73,14 +73,14 @@ const Who: React.FC = () => {
             className="text-5xl leading-[4rem] text-primary -sm:text-2xl"
             ref={aboutIntersectionRef}
           >
-            <p>CEO & Founder</p>
+            <p>Former Full Stack Developer</p>
             <Link
-              href="https://antarcticsolutions.ca/"
-              title="Antarctic Solutions website"
+              href="https://zerorampup.com/"
+              title="Zero RampUp"
               target="_blank"
               className="text-accent transition-all hover:text-buttonHover hover:underline "
             >
-              @Antarctic Solutions
+              @Zero RampUp
               {/* open link fa icon */}
               <FaExternalLinkAlt className="ml-2 inline-block h-8 w-8 text-accent -sm:h-4 -sm:w-4" />
             </Link>

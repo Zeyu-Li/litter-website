@@ -337,3 +337,10 @@ html {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+.animate-gradient {
+  background-size: 300%;
+  -webkit-animation: animatedgradient 6s ease infinite alternate;
+  -moz-animation: animatedgradient 6s ease infinite alternate;
+  animation: animatedgradient 6s ease infinite alternate;
+}

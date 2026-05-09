@@ -9,7 +9,7 @@ const STARS = 400;
 
 const CounterAnalytics: React.FC = () => {
   const [scrolledCount, setScrolledCount] = useState(false);
-  const counterIntersectionRef = useRef(null);
+  const counterIntersectionRef = useRef<HTMLDivElement>(null!);
   const counterIntersection = useIntersection(counterIntersectionRef, {
     root: null,
     rootMargin: "0px",

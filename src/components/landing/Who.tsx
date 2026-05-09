@@ -12,7 +12,7 @@ const Typing = dynamic(() => import("./who/Typing.js"), {
 
 const Who: React.FC = () => {
   const [scrolledAbout, setScrolledAbout] = useState(false);
-  const aboutIntersectionRef = useRef(null);
+  const aboutIntersectionRef = useRef<HTMLLIElement>(null!);
   const aboutIntersection = useIntersection(aboutIntersectionRef, {
     root: null,
     rootMargin: "0px",

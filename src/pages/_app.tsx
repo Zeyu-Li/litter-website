@@ -1,6 +1,6 @@
-import { type AppType } from "next/dist/shared/lib/utils";
+import { type AppType } from "next/app";
 import Head from "../components/SEO/Head";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 import "../styles/globals.css";
 

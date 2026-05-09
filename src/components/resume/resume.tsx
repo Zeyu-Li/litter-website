@@ -24,11 +24,11 @@ const ResumeDoc = () => {
     window.addEventListener("resize", resizeListener);
   }, []);
 
-  const removeTextLayerOffset = () => {
-    const textLayers = document.querySelectorAll(
+  const removeTextLayerOffset = (): void => {
+    const textLayers = document.querySelectorAll<HTMLElement>(
       ".react-pdf__Page__textContent"
     );
-    textLayers.forEach((layer: any) => {
+    textLayers.forEach((layer) => {
       const { style } = layer;
       style.top = "0";
       style.left = "0";

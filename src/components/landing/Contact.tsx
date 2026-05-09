@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useIntersection } from "react-use";
 
 const Contact: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [title, changeTitle] = useState("");
   const [body, changeBody] = useState("");
-  const intersectionRef = useRef(null);
+  const intersectionRef = useRef<HTMLHeadingElement>(null!);
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: "0px",
@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   if (intersection && intersection.intersectionRatio > 0.75 && !scrolled)
     setScrolled(true);
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     window.open(
       `mailto:andrew@tinkeringpenguin.com?subject=${title}&body=${body}`,

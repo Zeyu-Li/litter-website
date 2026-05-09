@@ -1,14 +1,12 @@
-import React, { useState, useEffect, lazy, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 
 const shinkSize = 1279;
-// const Model = lazy(() => import("./Model"));
 
 // TODO: optimize loading of component
 const Overlay: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
-  // const [firstLoad, setFirstLoad] = useState(0);
   const [blueSide, setBlueSide] = useState(window.innerWidth > 700);
   const [top, setTop] = useState(window.scrollY < window.innerHeight);
   const [smallSize, setSmallSize] = useState(window.innerWidth < shinkSize);
@@ -17,10 +15,6 @@ const Overlay: React.FC = () => {
   const [screenScale, setScreenScale] = useState(
     window.innerWidth > shinkSize ? 1 : 0.5
   );
-  // Use useRef for mutable variables that we want to persist
-  // without triggering a re-render on their change
-  const requestRef = useRef<any>(null);
-  const previousTimeRef = useRef<any>(null);
 
   useEffect(() => {
     window.onscroll = () => {

@@ -103,7 +103,7 @@ const Overlay: React.FC = () => {
 
   return (
     <div
-      className={`mobileOpacity pointer-events-none fixed z-0 mx-[10vw] h-[95vh] w-[30vh] xl:w-[50vh] min-w-[450px] md:mx-[10vw] xl:mx-[2vw] -sm:mx-0 ${
+      className={`mobileOpacity pointer-events-none fixed z-0 mx-[10vw] h-[95vh] w-[30vh] xl:w-[50vh] min-w-[320px] sm:min-w-[450px] max-w-[640px] xl:mx-[2vw] -sm:mx-0 ${
         smallSize && top ? "extraMargin" : "3xl:ml-[12vw]"
       } ${loaded ? "penguinModelLoad" : ""}`}
     >

@@ -7,6 +7,15 @@ html {
   overflow-x: hidden !important;
 }
 
+/* Default page background. Without this, any horizontal seam between
+ * fixed/100vw elements and the document edge falls back to the browser's
+ * white, which is visible at the right edge on screens where 100vw
+ * exceeds the body width (e.g. when a scrollbar is present). */
+body {
+  background-color: #010101; /* same as `primary` */
+  overflow-x: hidden;
+}
+
 /* Penguin model starting animations */
 .penguinModelLoad {
   top: -90vh;
@@ -19,6 +28,18 @@ html {
   }
   100% {
     top: 5vh;
+  }
+}
+
+/* On extra-wide aspect ratios (ultrawide monitors, phones in landscape),
+ * skip the fall-in animation and snap the penguin to its final position.
+ * The fall reads as awkward / jittery when the viewport is much wider
+ * than tall. The 2:1 cutoff sits above standard 16:9 (1.78:1) and below
+ * iPhone landscape (~2.17:1) and 21:9 ultrawide (2.33:1). */
+@media only screen and (min-aspect-ratio: 2/1) {
+  .penguinModelLoad {
+    top: 5vh;
+    animation: none;
   }
 }
 
@@ -161,6 +182,17 @@ html {
   }
 }
 
+/* On narrow phone portrait the canvas is min-w-[320px] (vs ≥sm's 450px),
+ * so the inherited -200px shift above pushes the penguin's center
+ * (≈canvas_width/2) past the left edge. Nudge it back to the right with
+ * a gentler offset proportional to the smaller canvas. */
+@media only screen and (max-width: 640px) {
+  .mobileOpacity > div {
+    left: -100px;
+  }
+}
+
+
 /* 
 * gradients too lazy to implement in 
 * tailwind since the figma inspect is there 
@@ -228,8 +260,12 @@ html {
   animation-fill-mode: both;
 }
 
-/* if on tablet or smaller do not display bounceInRight */
-@media (max-width: 768px) {
+/* Don't display the waving penguin video when there isn't a sensible
+ * place for it: on tablets/phones (already hidden) AND on extra-wide
+ * aspect ratios (ultrawide monitors, phones in landscape) where its
+ * `bounceInRight` slide-in from off-screen reads poorly and its final
+ * `translateX(20px)` position pokes past the viewport edge. */
+@media (max-width: 768px), (min-aspect-ratio: 2/1) {
   .bounceInRight {
     display: none;
   }

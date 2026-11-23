@@ -7,6 +7,8 @@ const Header: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    // intentional: flips after hydration so the nav fades in on first paint
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoaded(true);
   }, []);
 

@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+
+// Self-hosted legacy worker, matching the legacy pdf.js alias in next.config.mjs:
+// the modern pdf.js build only supports the latest browsers (not e.g. Safari 18).
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/legacy/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
 
 const ResumeDoc = () => {
   // sets title
@@ -42,7 +48,8 @@ const ResumeDoc = () => {
       loading={<p>Loading...</p>}
       externalLinkTarget="_blank"
     >
-      <div style={{ height: PDFWidth * (11 / 8.5) }}>
+      {/* width keeps react-pdf's white page background flush with the PDF */}
+      <div style={{ width: PDFWidth, height: PDFWidth * (11 / 8.5) }}>
         <Page
           onLoadSuccess={removeTextLayerOffset}
           pageNumber={1}

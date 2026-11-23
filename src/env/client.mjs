@@ -1,23 +1,21 @@
 // @ts-check
+import { z } from "zod";
 import { clientEnv, clientSchema } from "./schema.mjs";
 
 const _clientEnv = clientSchema.safeParse(clientEnv);
 
 export const formatErrors = (
-  /** @type {import('zod').ZodFormattedError<Map<string,string>,string>} */
-  errors,
+  /** @type {import('zod').ZodError} */
+  error,
 ) =>
-  Object.entries(errors)
-    .map(([name, value]) => {
-      if (value && "_errors" in value)
-        return `${name}: ${value._errors.join(", ")}\n`;
-    })
-    .filter(Boolean);
+  Object.entries(z.flattenError(error).fieldErrors).map(
+    ([name, messages]) => `${name}: ${(messages ?? []).join(", ")}\n`,
+  );
 
 if (!_clientEnv.success) {
   console.error(
     "❌ Invalid environment variables:\n",
-    ...formatErrors(_clientEnv.error.format()),
+    ...formatErrors(_clientEnv.error),
   );
   throw new Error("Invalid environment variables");
 }

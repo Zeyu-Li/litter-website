@@ -12,13 +12,19 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-
-    return config;
+  turbopack: {
+    // react-pdf: use the legacy pdf.js build so the resume renders on browsers
+    // older than the latest releases (e.g. Safari 18 / iOS 18)
+    resolveAlias: {
+      "pdfjs-dist": "pdfjs-dist/legacy/build/pdf.mjs",
+      "pdfjs-dist/web/pdf_viewer.mjs": "pdfjs-dist/legacy/web/pdf_viewer.mjs",
+    },
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
+      },
+    },
   },
 };
 export default config;
